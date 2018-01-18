@@ -8,6 +8,6 @@ RUN git clone https://github.com/bitzeny/cpuminer.git
 WORKDIR cpuminer
 
 RUN ./autogen.sh \
- && ./configure CFLAGS="-O3 -march=native -funroll-loops -fomit-frame-pointer" \
- && make \
- && make install
+  && ./configure CFLAGS="-O3 -march=native -funroll-loops -fomit-frame-pointer" \
+  && make \
+  && make install
