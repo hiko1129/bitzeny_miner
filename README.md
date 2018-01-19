@@ -13,8 +13,7 @@ docker-compose
 ## Usage
 open .env  
 add pool url  
-add user name  
-add worker name  
+add username  
 add password
 
 ```
@@ -24,13 +23,11 @@ docker-compose up
 ## Example
 edit .env  
 pool_url is your pool url  
-user_name is your pool user name  
-worker_name is your pool worker name  
+username is your pool username  
 password is your pool password
 ```
 POOL_URL=pool_url
-USER_NAME=user_name  
-WORKER_NAME=worker_name  
+USERNAME=username  
 PASSWORD=password
 ```
 
