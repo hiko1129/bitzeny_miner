@@ -1,7 +1,12 @@
-FROM ubuntu:16.04
+FROM alpine:3.7
 
-RUN apt-get update -y \
- && apt-get install -y git automake build-essential libcurl4-openssl-dev
+RUN apk add --no-cache autoconf \
+    automake \
+    build-base \
+    curl \
+    curl-dev \
+    git \
+    openssl-dev
 
 RUN git clone https://github.com/macchky/cpuminer
 
