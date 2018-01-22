@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.7 as builder
 
 RUN apk add --no-cache autoconf \
     automake \
@@ -16,3 +16,12 @@ RUN ./autogen.sh \
   && ./configure CFLAGS="-O3 -march=native -funroll-loops -fomit-frame-pointer" \
   && make \
   && make install
+
+FROM alpine:3.7
+
+RUN apk add --no-cache curl \
+    curl-dev
+
+COPY --from=builder /cpuminer/minerd /minerd
+
+ENTRYPOINT ["./minerd"]
