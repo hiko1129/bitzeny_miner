@@ -12,10 +12,10 @@ RUN git clone https://github.com/macchky/cpuminer
 
 WORKDIR cpuminer
 
-RUN ./autogen.sh \
-  && ./configure CFLAGS="-O3 -march=native -funroll-loops -fomit-frame-pointer" \
-  && make \
-  && make install
+RUN ./autogen.sh && \
+    ./configure CFLAGS="-O3 -march=native -funroll-loops -fomit-frame-pointer" && \
+    make && \
+    make install
 
 FROM alpine:3.7
 
