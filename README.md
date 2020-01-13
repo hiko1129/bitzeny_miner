@@ -4,7 +4,7 @@ bitzeny_miner
 This is dockerized bitzeny miner.
 
 ## Description
-simple bitzeny miner by docker
+dockerized simple bitzeny miner
 
 ## Requirement
 docker  
